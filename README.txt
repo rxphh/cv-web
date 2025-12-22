@@ -51,9 +51,9 @@ SECTIONS PRÉSENTES (Conformément aux consignes)
    - Projets DIY
 
 6. Contact
-   - Email : raphael.riviere@etu.univ-reunion.fr
+   - Email : raphael.riviere-2025@rt-iut.re
    - LinkedIn : https://www.linkedin.com/in/raphael-riviere-0a461a3a0/
-   - GitHub : https://github.com/raphaelriviere
+   - GitHub : https://github.com/rxphh
 
 
 POINTS FORTS DU PROJET
@@ -76,7 +76,6 @@ UTILISATION
 HÉBERGEMENT SUR GITHUB PAGES
 -----------------------------
 Le site est hébergé en ligne sur GitHub Pages.
-Voir le fichier GUIDE_HEBERGEMENT.txt pour les instructions détaillées.
 
 Liens :
 - Site en ligne : https://rxphh.github.io/cv-web/
