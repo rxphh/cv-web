@@ -79,8 +79,8 @@ Le site est hébergé en ligne sur GitHub Pages.
 Voir le fichier GUIDE_HEBERGEMENT.txt pour les instructions détaillées.
 
 Liens :
-- Site en ligne : https://[username].github.io/cv-web/
-- Code source : https://github.com/[username]/cv-web
+- Site en ligne : https://rxphh.github.io/cv-web/
+- Code source : https://github.com/rxphh/cv-web
 
 
 DERNIÈRE MISE À JOUR
