@@ -8,7 +8,7 @@ INFORMATIONS DU PROJET
 Étudiant  : Raphael Riviere
 Formation : BUT Réseaux & Télécommunications - 1ère année
 IUT       : La Réunion
-Date      : Décembre 2025
+Date      : Janvier 2026
 
 
 CHOIX TECHNIQUES
@@ -84,4 +84,4 @@ Liens :
 
 DERNIÈRE MISE À JOUR
 --------------------
-Décembre 2025
+Janvier 2026
