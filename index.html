@@ -2,7 +2,6 @@
 
 <html lang="fr">
 <head>
-    <!-- Métadonnées du document -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="CV Web de Raphael Riviere - Étudiant BUT R&T">
@@ -11,12 +10,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navigation principale fixe -->
     <nav class="navbar" role="navigation">
         <div class="nav-container">
-            <!-- Logo avec initiales -->
             <div class="logo">RR</div>
-            <!-- Menu de navigation -->
             <ul class="nav-menu">
                 <li><a href="#accueil">Accueil</a></li>
                 <li><a href="#parcours">Parcours</a></li>
@@ -30,7 +26,6 @@
     </nav>
 
 ```
-<!-- SECTION 1 : ACCUEIL -->
 <section id="accueil" class="fullscreen-section hero-section">
     <div class="hero-background"></div>
     <div class="section-content">
@@ -50,13 +45,11 @@
     <div class="scroll-hint">Défiler vers le bas</div>
 </section>
 
-<!-- SECTION 2 : PARCOURS ACADÉMIQUE -->
 <section id="parcours" class="fullscreen-section">
     <div class="section-content">
         <h2 class="section-title">Parcours Académique</h2>
         
         <div class="two-columns">
-            <!-- BUT R&T -->
             <article class="edu-card">
                 <div class="edu-year">2025 - Aujourd'hui</div>
                 <h3>BUT Réseaux & Télécommunications</h3>
@@ -75,7 +68,6 @@
                 </div>
             </article>
 
-            <!-- Baccalauréat -->
             <article class="edu-card">
                 <div class="edu-year">2022 - 2025</div>
                 <h3>Baccalauréat Technologique STI2D</h3>
@@ -87,7 +79,6 @@
     </div>
 </section>
 
-<!-- SECTION 3 : EXPÉRIENCES PROFESSIONNELLES -->
 <section id="experiences" class="fullscreen-section section-alt">
     <div class="section-content">
         <h2 class="section-title">Expériences Professionnelles</h2>
@@ -117,7 +108,6 @@
     </div>
 </section>
 
-<!-- SECTION 4 : COMPÉTENCES TECHNIQUES -->
 <section id="competences" class="fullscreen-section">
     <div class="section-content">
         <h2 class="section-title">Compétences Techniques</h2>
@@ -126,7 +116,6 @@
         </p>
         
         <div class="three-columns">
-            <!-- Réseaux -->
             <article class="skill-category">
                 <div class="category-icon-text">Réseaux</div>
                 <h3>Infrastructure réseau</h3>
@@ -152,7 +141,6 @@
                 </div>
             </article>
 
-            <!-- Systèmes -->
             <article class="skill-category">
                 <div class="category-icon-text">Systèmes</div>
                 <h3>Administration système</h3>
@@ -178,7 +166,6 @@
                 </div>
             </article>
 
-            <!-- Développement -->
             <article class="skill-category">
                 <div class="category-icon-text">Développement</div>
                 <h3>Technologies web</h3>
@@ -207,7 +194,6 @@
     </div>
 </section>
 
-<!-- SECTION 5 : SOFT SKILLS -->
 <section id="soft-skills" class="fullscreen-section section-alt">
     <div class="section-content">
         <h2 class="section-title">Soft Skills</h2>
@@ -240,7 +226,6 @@
     </div>
 </section>
 
-<!-- SECTION 6 : PASSIONS & HOBBIES -->
 <section id="passions" class="fullscreen-section">
     <div class="section-content">
         <h2 class="section-title">Passions & Centres d'intérêt</h2>
@@ -260,7 +245,6 @@
     </div>
 </section>
 
-<!-- SECTION 7 : CONTACT -->
 <section id="contact" class="fullscreen-section section-alt">
     <div class="section-content">
         <h2 class="section-title">Contact</h2>
@@ -272,7 +256,7 @@
             <article class="contact-card">
                 <div class="contact-icon-text">Email</div>
                 <h3>Adresse électronique</h3>
-                <a href="/cdn-cgi/l/email-protection#ccbeadbca4ada9a0e2bea5baa5a9bea9e1fefcfef98cbeb8e1a5b9b8e2bea9"><span class="__cf_email__" data-cfemail="97e5f6e7fff6f2fbb9e5fee1fef2e5f2baa5a7a5a2d7e5e3bafee2e3b9e5f2">[email&#160;protected]</span></a>
+                <a href="mailto:raphael.riviere-2025@rt-iut.re">raphael.riviere-2025@rt-iut.re</a>
             </article>
             <article class="contact-card">
                 <div class="contact-icon-text">LinkedIn</div>
@@ -286,7 +270,6 @@
             </article>
         </div>
 
-        <!-- Footer -->
         <footer class="footer-info">
             <p>Dernière mise à jour : Janvier 2026</p>
             <p>Projet SAÉ 1.04 - HTML5 / CSS3 / JavaScript - VS Code</p>
@@ -295,24 +278,30 @@
     </div>
 </section>
 
-<!-- Script optimisé pour menu actif -->
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-    // Sélection des éléments
+<script>
     const navLinks = document.querySelectorAll('.nav-menu a');
     const sections = document.querySelectorAll('.fullscreen-section');
 
-    // Configuration de l'IntersectionObserver
     const observerOptions = {
         root: null,
         rootMargin: '-50% 0px -50% 0px',
         threshold: 0
     };
 
-    // Callback quand une section devient visible
     const observerCallback = (entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 navLinks.forEach(link => link.classList.remove('active'));
                 const activeLink = document.querySelector(`.nav-menu a[href="#${entry.target.id}"]`);
                 if (activeLink) activeLink.classList.add('active');
+            }
+        });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+    sections.forEach(section => observer.observe(section));
+</script>
 ```
+
+</body>
+</html>
