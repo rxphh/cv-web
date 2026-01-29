@@ -1,16 +1,18 @@
 <!DOCTYPE html>
+
 <html lang="fr">
 <head>
     <!-- Métadonnées du document -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="CV Web de Raphael Riviere - Étudiant BUT R&T">
+    <meta name="author" content="Raphael Riviere">
     <title>CV Web - Raphael Riviere</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Navigation principale fixe -->
-    <nav class="navbar">
+    <nav class="navbar" role="navigation">
         <div class="nav-container">
             <!-- Logo avec initiales -->
             <div class="logo">RR</div>
@@ -18,6 +20,7 @@
             <ul class="nav-menu">
                 <li><a href="#accueil">Accueil</a></li>
                 <li><a href="#parcours">Parcours</a></li>
+                <li><a href="#experiences">Expériences</a></li>
                 <li><a href="#competences">Compétences</a></li>
                 <li><a href="#soft-skills">Soft Skills</a></li>
                 <li><a href="#passions">Passions</a></li>
@@ -26,261 +29,290 @@
         </div>
     </nav>
 
-    <!-- SECTION 1 : ACCUEIL - Page d'accueil avec présentation -->
-    <section id="accueil" class="fullscreen-section hero-section">
-        <div class="hero-background"></div>
-        <div class="section-content">
-            <span class="badge">Étudiant BUT R&T • 1ère Année</span>
-            <h1 class="main-title">
-                <span class="title-small">Bonjour, je suis</span>
-                <span class="title-large">Raphael Riviere</span>
-            </h1>
-            <p class="subtitle">
-                Étudiant en BUT Réseaux & Télécommunications à l'IUT de La Réunion
-            </p>
-            <div class="hero-buttons">
-                <a href="#parcours" class="btn btn-primary">Découvrir</a>
-                <a href="#contact" class="btn btn-secondary">Contact</a>
-            </div>
+```
+<!-- SECTION 1 : ACCUEIL -->
+<section id="accueil" class="fullscreen-section hero-section">
+    <div class="hero-background"></div>
+    <div class="section-content">
+        <span class="badge">Étudiant BUT R&T - 1ère Année</span>
+        <h1 class="main-title">
+            <span class="title-small">Bonjour, je suis</span>
+            <span class="title-large">Raphael Riviere</span>
+        </h1>
+        <p class="subtitle">
+            Étudiant en BUT Réseaux & Télécommunications à l'IUT de La Réunion
+        </p>
+        <div class="hero-buttons">
+            <a href="#parcours" class="btn btn-primary">Découvrir mon profil</a>
+            <a href="#contact" class="btn btn-secondary">Me contacter</a>
         </div>
-        <!-- Indicateur de navigation -->
-        <div class="scroll-hint">Faites défiler ↓</div>
-    </section>
+    </div>
+    <div class="scroll-hint">Défiler vers le bas</div>
+</section>
 
-    <!-- SECTION 2 : PARCOURS ACADÉMIQUE -->
-    <section id="parcours" class="fullscreen-section">
-        <div class="section-content">
-            <h2 class="section-title">Parcours Académique</h2>
-            
-            <div class="two-columns">
-                <!-- Colonne gauche : BUT R&T -->
-                <div class="edu-card">
-                    <div class="edu-year">2025 - Aujourd'hui</div>
-                    <h3>BUT Réseaux & Télécommunications</h3>
-                    <p class="edu-school">IUT de La Réunion - 1ère année</p>
-                    <div class="edu-courses">
-                        <span class="course-tag">R1.01 - Réseaux</span>
-                        <span class="course-tag">R1.02 - Architecture</span>
-                        <span class="course-tag">R1.03 - Équipements</span>
-                        <span class="course-tag">R1.07 - Programmation</span>
-                        <span class="course-tag">R1.08 - Systèmes</span>
-                        <span class="course-tag">R1.09 - Web</span>
-                    </div>
+<!-- SECTION 2 : PARCOURS ACADÉMIQUE -->
+<section id="parcours" class="fullscreen-section">
+    <div class="section-content">
+        <h2 class="section-title">Parcours Académique</h2>
+        
+        <div class="two-columns">
+            <!-- BUT R&T -->
+            <article class="edu-card">
+                <div class="edu-year">2025 - Aujourd'hui</div>
+                <h3>BUT Réseaux & Télécommunications</h3>
+                <p class="edu-school">IUT de La Réunion - 1ère année</p>
+                <p class="edu-description-text">
+                    Formation en 3 ans axée sur les infrastructures réseau, la sécurité informatique 
+                    et l'administration des systèmes.
+                </p>
+                <div class="edu-courses">
+                    <span class="course-tag">R1.01 - Réseaux</span>
+                    <span class="course-tag">R1.02 - Architecture</span>
+                    <span class="course-tag">R1.03 - Équipements</span>
+                    <span class="course-tag">R1.07 - Programmation</span>
+                    <span class="course-tag">R1.08 - Systèmes</span>
+                    <span class="course-tag">R1.09 - Web</span>
                 </div>
+            </article>
 
-                <!-- Colonne droite : Bac -->
-                <div class="edu-card">
-                    <div class="edu-year">2022 - 2025</div>
-                    <h3>Baccalauréat Technologique</h3>
-                    <p class="edu-school">STI2D - Spécialité SIN</p>
-                    <p class="edu-description">
-                        Lycée Pierre Poivre - Saint-Joseph
-                    </p>
-                    <p class="edu-detail">
-                        Systèmes d'Information et Numérique
-                    </p>
-                </div>
-            </div>
+            <!-- Baccalauréat -->
+            <article class="edu-card">
+                <div class="edu-year">2022 - 2025</div>
+                <h3>Baccalauréat Technologique STI2D</h3>
+                <p class="edu-school">Spécialité SIN</p>
+                <p class="edu-location">Lycée Pierre Poivre - Saint-Joseph</p>
+                <p class="edu-detail">Systèmes d'Information et Numérique</p>
+            </article>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- SECTION 3 : COMPÉTENCES TECHNIQUES -->
-    <section id="competences" class="fullscreen-section section-alt">
-        <div class="section-content">
-            <h2 class="section-title">Compétences Techniques</h2>
-            
-            <div class="three-columns">
-                <!-- Colonne 1 : Réseaux -->
-                <div class="skill-category">
-                    <div class="category-icon">🌐</div>
-                    <h3>Réseaux</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <span>TCP/IP</span>
-                            <div class="skill-bar"><div class="skill-fill" style="width: 60%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <span>Packet Tracer</span>
-                            <div class="skill-bar"><div class="skill-fill" style="width: 65%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <span>Wireshark</span>
-                            <div class="skill-bar"><div class="skill-fill" style="width: 55%"></div></div>
-                        </div>
+<!-- SECTION 3 : EXPÉRIENCES PROFESSIONNELLES -->
+<section id="experiences" class="fullscreen-section section-alt">
+    <div class="section-content">
+        <h2 class="section-title">Expériences Professionnelles</h2>
+        
+        <div class="experience-container">
+            <article class="exp-card">
+                <div class="exp-header">
+                    <div>
+                        <h3>Stage de 3ème</h3>
+                        <p class="exp-company">FG Informatique - Saint-Joseph</p>
                     </div>
+                    <span class="exp-date">2021 - 2022</span>
                 </div>
+                <p class="exp-role">Diagnostic et réparation de pannes d'ordinateur</p>
+                <p class="exp-description">
+                    Stage d'observation en magasin d'informatique. Découverte du diagnostic matériel, 
+                    de la réparation de pannes informatiques et de l'assistance technique auprès des clients.
+                </p>
+                <ul class="exp-tasks">
+                    <li>Diagnostic de pannes matérielles et logicielles</li>
+                    <li>Réparation et maintenance d'ordinateurs</li>
+                    <li>Assistance technique auprès de la clientèle</li>
+                    <li>Découverte du milieu professionnel informatique</li>
+                </ul>
+            </article>
+        </div>
+    </div>
+</section>
 
-                <!-- Colonne 2 : Systèmes -->
-                <div class="skill-category">
-                    <div class="category-icon">💻</div>
-                    <h3>Systèmes</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <span>Linux</span>
-                            <div class="skill-bar"><div class="skill-fill" style="width: 70%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <span>Windows</span>
-                            <div class="skill-bar"><div class="skill-fill" style="width: 65%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <span>VirtualBox</span>
-                            <div class="skill-bar"><div class="skill-fill" style="width: 60%"></div></div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Colonne 3 : Développement -->
-                <div class="skill-category">
-                    <div class="category-icon">🎨</div>
-                    <h3>Développement</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <span>HTML/CSS</span>
-                            <div class="skill-bar"><div class="skill-fill" style="width: 80%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <span>JavaScript</span>
-                            <div class="skill-bar"><div class="skill-fill" style="width: 50%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <span></span>
-                            <div class="skill-bar"><div class="skill-fill" style="width: 65%"></div></div>
+<!-- SECTION 4 : COMPÉTENCES TECHNIQUES -->
+<section id="competences" class="fullscreen-section">
+    <div class="section-content">
+        <h2 class="section-title">Compétences Techniques</h2>
+        <p class="section-intro">
+            Compétences acquises durant ma formation en BUT R&T et mes expériences personnelles.
+        </p>
+        
+        <div class="three-columns">
+            <!-- Réseaux -->
+            <article class="skill-category">
+                <div class="category-icon-text">Réseaux</div>
+                <h3>Infrastructure réseau</h3>
+                <div class="skill-items">
+                    <div class="skill-item">
+                        <span>Protocoles TCP/IP</span>
+                        <div class="skill-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+                            <div class="skill-fill" style="width: 60%"></div>
                         </div>
                     </div>
+                    <div class="skill-item">
+                        <span>Packet Tracer</span>
+                        <div class="skill-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
+                            <div class="skill-fill" style="width: 65%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span>Wireshark</span>
+                        <div class="skill-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">
+                            <div class="skill-fill" style="width: 55%"></div>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </article>
+
+            <!-- Systèmes -->
+            <article class="skill-category">
+                <div class="category-icon-text">Systèmes</div>
+                <h3>Administration système</h3>
+                <div class="skill-items">
+                    <div class="skill-item">
+                        <span>Linux</span>
+                        <div class="skill-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                            <div class="skill-fill" style="width: 70%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span>Virtualisation</span>
+                        <div class="skill-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
+                            <div class="skill-fill" style="width: 65%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span>VirtualBox</span>
+                        <div class="skill-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+                            <div class="skill-fill" style="width: 60%"></div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Développement -->
+            <article class="skill-category">
+                <div class="category-icon-text">Développement</div>
+                <h3>Technologies web</h3>
+                <div class="skill-items">
+                    <div class="skill-item">
+                        <span>HTML / CSS</span>
+                        <div class="skill-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                            <div class="skill-fill" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span>JavaScript</span>
+                        <div class="skill-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                            <div class="skill-fill" style="width: 50%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span>Responsive Design</span>
+                        <div class="skill-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                            <div class="skill-fill" style="width: 75%"></div>
+                        </div>
+                    </div>
+                </div>
+            </article>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- SECTION 4 : SOFT SKILLS -->
-    <section id="soft-skills" class="fullscreen-section">
-        <div class="section-content">
-            <h2 class="section-title">Soft Skills</h2>
-            
-            <div class="soft-grid">
-                <div class="soft-card">
-                    <div class="soft-icon">🤝</div>
-                    <h3>Travail d'équipe</h3>
-                    <p>Collaboration sur projets collectifs</p>
-                </div>
-                <div class="soft-card">
-                    <div class="soft-icon">🎯</div>
-                    <h3>Rigueur</h3>
-                    <p>Attention aux détails techniques</p>
-                </div>
-                <div class="soft-card">
-                    <div class="soft-icon">🔍</div>
-                    <h3>Résolution de problèmes</h3>
-                    <p>Diagnostic de pannes</p>
-                </div>
-                <div class="soft-card">
-                    <div class="soft-icon">📚</div>
-                    <h3>Apprentissage</h3>
-                    <p>Veille technologique</p>
-                </div>
-            </div>
+<!-- SECTION 5 : SOFT SKILLS -->
+<section id="soft-skills" class="fullscreen-section section-alt">
+    <div class="section-content">
+        <h2 class="section-title">Soft Skills</h2>
+        <p class="section-intro">
+            Qualités développées lors de mes projets en équipe et mon parcours académique.
+        </p>
+        
+        <div class="soft-grid">
+            <article class="soft-card">
+                <div class="soft-icon-text">Collaboration</div>
+                <h3>Travail d'équipe</h3>
+                <p>Collaboration efficace sur projets collectifs et partage des connaissances</p>
+            </article>
+            <article class="soft-card">
+                <div class="soft-icon-text">Précision</div>
+                <h3>Rigueur</h3>
+                <p>Attention particulière aux détails techniques et respect des procédures</p>
+            </article>
+            <article class="soft-card">
+                <div class="soft-icon-text">Analyse</div>
+                <h3>Résolution de problèmes</h3>
+                <p>Diagnostic méthodique et résolution de pannes techniques</p>
+            </article>
+            <article class="soft-card">
+                <div class="soft-icon-text">Apprentissage</div>
+                <h3>Veille technologique</h3>
+                <p>Formation continue et suivi des évolutions technologiques</p>
+            </article>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- SECTION 5 : PASSIONS & HOBBIES -->
-    <section id="passions" class="fullscreen-section section-alt">
-        <div class="section-content">
-            <h2 class="section-title">Passions & Hobbies</h2>
-            
-            <div class="hobbies-grid">
-                <div class="hobby-card">
-                    <div class="hobby-icon">💻</div>
-                    <h3>Technologies</h3>
-                    <p>Veille sur les nouvelles technologies en informatique et réseaux</p>
-                </div>
-                <div class="hobby-card">
-                    <div class="hobby-icon">🎮</div>
-                    <h3>Gaming</h3>
-                    <p>Jeux vidéo et découverte de nouveaux univers</p>
-                </div>
-                <div class="hobby-card">
-                    <div class="hobby-icon">🏎️</div>
-                    <h3>Sport Automobile</h3>
-                    <p>Passion pour la mécanique, le rallye et les courses automobiles</p>
-                </div>
-            </div>
+<!-- SECTION 6 : PASSIONS & HOBBIES -->
+<section id="passions" class="fullscreen-section">
+    <div class="section-content">
+        <h2 class="section-title">Passions & Centres d'intérêt</h2>
+        
+        <div class="hobbies-grid">
+            <article class="hobby-card">
+                <div class="hobby-icon-text">Gaming</div>
+                <h3>Jeux vidéo</h3>
+                <p>Pratique régulière de jeux vidéo, de la stratégie aux FPS. Intérêt pour l'esport et les nouvelles sorties.</p>
+            </article>
+            <article class="hobby-card">
+                <div class="hobby-icon-text">Sport Auto</div>
+                <h3>Sport Automobile</h3>
+                <p>Passionné de Formule 1, rallye et sports mécaniques. Suivi des courses et actualités du monde automobile.</p>
+            </article>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- SECTION 6 : CONTACT -->
-    <section id="contact" class="fullscreen-section">
-        <div class="section-content">
-            <h2 class="section-title">Contact</h2>
-            
-            <div class="contact-grid">
-                <div class="contact-card">
-                    <div class="contact-icon">📧</div>
-                    <h3>Email</h3>
-                    <a href="mailto:raphael.riviere-2025@rt-iut.re">
-                        raphael.riviere-2025@rt-iut.re
-                    </a>
-                </div>
-                <div class="contact-card">
-                    <div class="contact-icon">💼</div>
-                    <h3>LinkedIn</h3>
-                    <a href="https://www.linkedin.com/in/raphael-riviere-0a461a3a0/" target="_blank">
-                        Mon profil LinkedIn
-                    </a>
-                </div>
-                <div class="contact-card">
-                    <div class="contact-icon">🐙</div>
-                    <h3>GitHub</h3>
-                    <a href="https://github.com/rxphh" target="_blank">
-                        Mes projets GitHub
-                    </a>
-                </div>
-            </div>
-
-            <!-- Footer dans la dernière section -->
-            <div class="footer-info">
-                <p>Dernière mise à jour : Janvier 2026 </p>
-                <p>Projet SAÉ 1.04 - HTML5/CSS3 - VS Code</p>
-            </div>
+<!-- SECTION 7 : CONTACT -->
+<section id="contact" class="fullscreen-section section-alt">
+    <div class="section-content">
+        <h2 class="section-title">Contact</h2>
+        <p class="section-intro">
+            N'hésitez pas à me contacter pour toute question ou opportunité professionnelle.
+        </p>
+        
+        <div class="contact-grid">
+            <article class="contact-card">
+                <div class="contact-icon-text">Email</div>
+                <h3>Adresse électronique</h3>
+                <a href="/cdn-cgi/l/email-protection#ccbeadbca4ada9a0e2bea5baa5a9bea9e1fefcfef98cbeb8e1a5b9b8e2bea9"><span class="__cf_email__" data-cfemail="97e5f6e7fff6f2fbb9e5fee1fef2e5f2baa5a7a5a2d7e5e3bafee2e3b9e5f2">[email&#160;protected]</span></a>
+            </article>
+            <article class="contact-card">
+                <div class="contact-icon-text">LinkedIn</div>
+                <h3>Réseau professionnel</h3>
+                <a href="https://www.linkedin.com/in/raphael-riviere-0a461a3a0/" target="_blank" rel="noopener noreferrer">Mon profil LinkedIn</a>
+            </article>
+            <article class="contact-card">
+                <div class="contact-icon-text">GitHub</div>
+                <h3>Projets informatiques</h3>
+                <a href="https://github.com/rxphh" target="_blank" rel="noopener noreferrer">Mes projets sur GitHub</a>
+            </article>
         </div>
-    </section>
 
-    <!-- Script pour menu actif selon la section visible -->
-    <script>
-        // Récupération de tous les liens du menu et toutes les sections
-        const navLinks = document.querySelectorAll('.nav-menu a');
-        const sections = document.querySelectorAll('.fullscreen-section');
+        <!-- Footer -->
+        <footer class="footer-info">
+            <p>Dernière mise à jour : Janvier 2026</p>
+            <p>Projet SAÉ 1.04 - HTML5 / CSS3 / JavaScript - VS Code</p>
+            <p class="site-host">Site hébergé sur GitHub Pages</p>
+        </footer>
+    </div>
+</section>
 
-        // Fonction pour activer le lien correspondant à la section visible
-        function setActiveLink() {
-            let currentSection = '';
-            
-            // Parcourir toutes les sections
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                
-                // Vérifier si on est dans cette section (avec marge pour la navbar)
-                if (window.scrollY >= (sectionTop - 100)) {
-                    currentSection = section.getAttribute('id');
-                }
-            });
+<!-- Script optimisé pour menu actif -->
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    // Sélection des éléments
+    const navLinks = document.querySelectorAll('.nav-menu a');
+    const sections = document.querySelectorAll('.fullscreen-section');
 
-            // Retirer la classe active de tous les liens
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                // Ajouter la classe active au lien correspondant
-                if (link.getAttribute('href') === '#' + currentSection) {
-                    link.classList.add('active');
-                }
-            });
-        }
+    // Configuration de l'IntersectionObserver
+    const observerOptions = {
+        root: null,
+        rootMargin: '-50% 0px -50% 0px',
+        threshold: 0
+    };
 
-        // Exécuter au chargement de la page
-        setActiveLink();
-
-        // Exécuter à chaque scroll
-        window.addEventListener('scroll', setActiveLink);
-    </script>
-</body>
-</html>
+    // Callback quand une section devient visible
+    const observerCallback = (entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                navLinks.forEach(link => link.classList.remove('active'));
+                const activeLink = document.querySelector(`.nav-menu a[href="#${entry.target.id}"]`);
+                if (activeLink) activeLink.classList.add('active');
+```
